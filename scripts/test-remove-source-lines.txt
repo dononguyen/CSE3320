@@ -1,0 +1,18 @@
+
+
+	// !STUDENT_DONOT_BEGIN
+	ldr	x0, =bss_begin		
+	ldr	x1, =bss_end
+	sub	x1, x1, x0
+	// !STUDENT_DONOT_END
+
+
+
+ventry	el1_irq						//!STUDENT_WILL_SEE_AS (ventry	irq_invalid_el1h)
+
+
+sys_timer_irq();         //!STUDENT_DONOT_SEE
+
+	sys_timer_irq();         //!STUDENT_DONOT_SEE
+
+// sys_timer_irq_simple();  //!STUDENT_DONOT_SEE
